@@ -20,7 +20,7 @@ public class CadPaciente {
     private String stateBirth;
     private String rg;
     private String cpf;
-    private String endereco;
+    private String address;
     private String cep;
     private String cityHousing;
     private String stateHousing;
@@ -38,11 +38,10 @@ public class CadPaciente {
 
     public CadPaciente(Long id, String name, String nameMother,
                        String nameFather, Date dateBirth, String cityBirth,
-                       String stateBirth, String rg, String cpf,
-                       String endereco, String cep, String cityHousing,
-                       String stateHousing, String email, String fone,
-                       String cellPhone, String nameResponsible, String rgResponsible,
-                       String cpfResponsible, String phoneResponsible,
+                       String stateBirth, String rg, String cpf, String address,
+                       String cep, String cityHousing, String stateHousing,
+                       String email, String fone, String cellPhone, String nameResponsible,
+                       String rgResponsible, String cpfResponsible, String phoneResponsible,
                        String cellphoneResponsible) {
         this.id = id;
         this.name = name;
@@ -53,7 +52,7 @@ public class CadPaciente {
         this.stateBirth = stateBirth;
         this.rg = rg;
         this.cpf = cpf;
-        this.endereco = endereco;
+        this.address = address;
         this.cep = cep;
         this.cityHousing = cityHousing;
         this.stateHousing = stateHousing;
@@ -139,12 +138,12 @@ public class CadPaciente {
         this.cpf = cpf;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public String getAddress() {
+        return address;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getCep() {

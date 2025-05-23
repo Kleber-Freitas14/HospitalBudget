@@ -1,0 +1,22 @@
+{
+  "cep": 12345678,
+  "cpf": 12345678900,
+  "cpf_respopnsible": 98765432100,
+  "rg": 123456789,
+  "rg_responsible": 987654321,
+  "date_birth": "1990-01-01T00:00:00",
+  "cell_phone": "11999999999",
+  "cellphone_responsible": "11988888888",
+  "city_birth": "São Paulo",
+  "city_housing": "Campinas",
+  "email": "paciente@example.com",
+  "end": "Rua das Flores, 123",
+  "fone": "1133334444",
+  "name": "João da Silva",
+  "name_father": "Carlos da Silva",
+  "name_mother": "Maria da Silva",
+  "name_responsible": "Ana da Silva",
+  "phone_responsible": "1144445555",
+  "state_birth": "SP",
+  "state_housing": "SP"
+}

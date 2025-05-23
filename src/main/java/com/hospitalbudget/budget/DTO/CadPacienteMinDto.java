@@ -7,7 +7,7 @@ import java.util.Date;
 public class CadPacienteMinDto {
 
     private Long id;
-    private String name;
+    public String name;
     private String nameMother;
     private String rg;
     private String cpf;
