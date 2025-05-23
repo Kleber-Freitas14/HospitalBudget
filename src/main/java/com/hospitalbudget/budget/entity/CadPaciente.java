@@ -1,14 +1,12 @@
 package com.hospitalbudget.budget.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.Date;
 import java.util.Objects;
 
 @Entity
+@Table(name = "CadPct")
 public class CadPaciente {
 
     @Id
@@ -20,29 +18,32 @@ public class CadPaciente {
     private Date dateBirth;
     private String cityBirth;
     private String stateBirth;
-    private Integer rg;
-    private Integer cpf;
-    private String end;
-    private Integer cep;
+    private String rg;
+    private String cpf;
+    private String endereco;
+    private String cep;
     private String cityHousing;
     private String stateHousing;
     private String email;
     private String fone;
     private String cellPhone;
     private String nameResponsible;
-    private Integer rgResponsible;
-    private Integer cpfRespopnsible;
+    private String rgResponsible;
+    private String cpfResponsible;
     private String phoneResponsible;
     private String cellphoneResponsible;
 
-    public CadPaciente(){
+    public CadPaciente() {
     }
 
-    public CadPaciente(Long id, String name, String nameMother, String nameFather,
-                       Date dateBirth, String cityBirth, String stateBirth, Integer rg, Integer cpf,
-                       String end, Integer cep, String cityHousing, String stateHousing, String email,
-                       String fone, String cellPhone, String nameResponsible, Integer rgResponsible,
-                       Integer cpfRespopnsible, String phoneResponsible, String cellphoneResponsible) {
+    public CadPaciente(Long id, String name, String nameMother,
+                       String nameFather, Date dateBirth, String cityBirth,
+                       String stateBirth, String rg, String cpf,
+                       String endereco, String cep, String cityHousing,
+                       String stateHousing, String email, String fone,
+                       String cellPhone, String nameResponsible, String rgResponsible,
+                       String cpfResponsible, String phoneResponsible,
+                       String cellphoneResponsible) {
         this.id = id;
         this.name = name;
         this.nameMother = nameMother;
@@ -52,7 +53,7 @@ public class CadPaciente {
         this.stateBirth = stateBirth;
         this.rg = rg;
         this.cpf = cpf;
-        this.end = end;
+        this.endereco = endereco;
         this.cep = cep;
         this.cityHousing = cityHousing;
         this.stateHousing = stateHousing;
@@ -61,7 +62,7 @@ public class CadPaciente {
         this.cellPhone = cellPhone;
         this.nameResponsible = nameResponsible;
         this.rgResponsible = rgResponsible;
-        this.cpfRespopnsible = cpfRespopnsible;
+        this.cpfResponsible = cpfResponsible;
         this.phoneResponsible = phoneResponsible;
         this.cellphoneResponsible = cellphoneResponsible;
     }
@@ -122,35 +123,35 @@ public class CadPaciente {
         this.stateBirth = stateBirth;
     }
 
-    public Integer getRg() {
+    public String getRg() {
         return rg;
     }
 
-    public void setRg(Integer rg) {
+    public void setRg(String rg) {
         this.rg = rg;
     }
 
-    public Integer getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(Integer cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
-    public String getEnd() {
-        return end;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public void setEnd(String end) {
-        this.end = end;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
-    public Integer getCep() {
+    public String getCep() {
         return cep;
     }
 
-    public void setCep(Integer cep) {
+    public void setCep(String cep) {
         this.cep = cep;
     }
 
@@ -202,20 +203,20 @@ public class CadPaciente {
         this.nameResponsible = nameResponsible;
     }
 
-    public Integer getRgResponsible() {
+    public String getRgResponsible() {
         return rgResponsible;
     }
 
-    public void setRgResponsible(Integer rgResponsible) {
+    public void setRgResponsible(String rgResponsible) {
         this.rgResponsible = rgResponsible;
     }
 
-    public Integer getCpfRespopnsible() {
-        return cpfRespopnsible;
+    public String getCpfResponsible() {
+        return cpfResponsible;
     }
 
-    public void setCpfRespopnsible(Integer cpfRespopnsible) {
-        this.cpfRespopnsible = cpfRespopnsible;
+    public void setCpfResponsible(String cpfResponsible) {
+        this.cpfResponsible = cpfResponsible;
     }
 
     public String getPhoneResponsible() {
@@ -238,11 +239,12 @@ public class CadPaciente {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof CadPaciente that)) return false;
-        return Objects.equals(id, that.id);
+        return Objects.equals(id, that.id) && Objects.equals(name, that.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(id);
+        return Objects.hash(id, name);
     }
 }
+

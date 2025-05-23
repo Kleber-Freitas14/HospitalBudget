@@ -1,4 +1,11 @@
 package com.hospitalbudget.budget.repository;
 
-public interface CadPacienteRepository {
+import com.hospitalbudget.budget.entity.CadPaciente;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface CadPacienteRepository extends JpaRepository <CadPaciente, Long>{
+
+
 }
